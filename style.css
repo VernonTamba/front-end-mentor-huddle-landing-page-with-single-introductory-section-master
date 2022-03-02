@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/bg-mobile.svg);
+  background-color: hsl(257, 40%, 49%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  max-width: 7rem;
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+
+header img {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.container {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.containerLeft {
+  max-width: 17rem;
+}
+
+.containerLeft img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.containerRight {
+  text-align: center;
+}
+
+.containerRight h1 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 1rem + 1vw, 4rem);
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.containerRight p {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: clamp(0.1rem, 0.5rem + 1vw, 0.8rem);
+  padding: 0 1.2rem;
+}
+
+.containerRight button {
+  font-family: "Open Sans", sans-serif;
+  color: hsl(257, 40%, 49%);
+  padding: 0.5rem 4rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: clamp(0.5rem, 0.5rem + 1vw, 1rem);
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.containerRight button:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+  transform: translate3d(0px, -2px, 0px);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+footer i {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+footer i:hover {
+  background-color: hsl(300, 69%, 71%);
+  transform: translate3d(0px, -2px, 0px);
+}
+
+@media (min-width: 50rem) {
+  body {
+    background-image: url(./images/bg-desktop.svg);
+    background-color: hsl(257, 40%, 49%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  header {
+    max-width: 10rem;
+    margin-top: 3rem;
+    margin-left: 9rem;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+  }
+
+  .containerLeft {
+    width: 90%;
+    max-width: 35rem;
+    margin-top: 3rem;
+  }
+
+  .containerRight {
+    width: min(35%, 100rem);
+    text-align: left;
+  }
+
+  .containerRight h1 {
+    /* width: min(); */
+  }
+
+  .containerRight p {
+    padding: 0;
+  }
+
+  footer {
+    justify-content: end;
+    margin-right: 5rem;
+  }
+}
